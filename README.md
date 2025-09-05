@@ -129,7 +129,7 @@ renderPagination(dataArray, navContainer, section, callback)
 
 ## 프로젝트 링크 (옵션)
 
-- [🔗 배포된 사이트 바로가기](https://www.jedongkim95.dothome.co.kr)
+- [🔗 배포된 사이트 바로가기](http://jedongkim95.dothome.co.kr/)
 
 ---
 
