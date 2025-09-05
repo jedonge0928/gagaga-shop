@@ -1,0 +1,177 @@
+.section_product_all {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section_product_all > input {
+  display: none;
+}
+
+.section_product_title_box > p {
+  font-size: 24px;
+  margin: 100px 0 30px;
+}
+.section_product_category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.section_product_category label {
+  margin: 30px 0;
+  font-size: 15px;
+  padding: 5px 30px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.section_product_category label:hover {
+  border: 1px solid #bf6313;
+  color: #bf6313;
+}
+
+.category_product {
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.category_all {
+  width: calc(100% / 3 - 16px);
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #e9e9e9;
+}
+.category_all_img {
+  width: 100%;
+  height: 350px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.category_all_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+.category_shopping_basket {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.category_shopping_basket {
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.category_shopping_basket img {
+  width: 25px;
+  height: 25px;
+}
+
+.category_all_img:hover img {
+  transform: scale(1.2);
+}
+.category_all_text {
+  padding: 10px;
+  text-align: right;
+}
+
+.category_all_text_title {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.category_all_price {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.category_all_img:hover .category_shopping_basket {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.category_shopping_basket {
+  transform: translateY(-10px);
+}
+
+#category_product_01:checked ~ .leather_sofa {
+  display: flex;
+}
+#category_product_02:checked ~ .fabric_sofa {
+  display: flex;
+}
+#category_product_03:checked ~ .storage_closet {
+  display: flex;
+}
+#category_product_04:checked ~ .living_room_table {
+  display: flex;
+}
+#category_product_01:checked ~ .section_product_category label:nth-child(1) {
+  border: 1px solid #bf6313;
+  color: #bf6313;
+}
+#category_product_02:checked ~ .section_product_category label:nth-child(2) {
+  border: 1px solid #bf6313;
+  color: #bf6313;
+}
+#category_product_03:checked ~ .section_product_category label:nth-child(3) {
+  border: 1px solid #bf6313;
+  color: #bf6313;
+}
+#category_product_04:checked ~ .section_product_category label:nth-child(4) {
+  border: 1px solid #bf6313;
+  color: #bf6313;
+}
+
+.pagination {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 50px 0;
+  flex-wrap: nowrap;
+}
+
+.pagination button {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  background-color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.pagination button.active {
+  font-size: 22px;
+  color: #bf6313;
+}
+
+.pagination button img {
+  width: 100%;
+  height: 100%;
+}
+
+#category_product_01:checked ~ .pagination.leather {
+  display: flex;
+}
+#category_product_02:checked ~ .pagination.fabric {
+  display: flex;
+}
+#category_product_03:checked ~ .pagination.storage {
+  display: flex;
+}
+#category_product_04:checked ~ .pagination.living {
+  display: flex;
+}

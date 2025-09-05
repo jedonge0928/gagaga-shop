@@ -1,0 +1,159 @@
+{
+  "user": [
+    {
+      "name": "홍길동",
+      "id": "user001",
+      "pw": "12345678@",
+      "emailId": "user001",
+      "domain": "daum.net",
+      "birth": "000101"
+    },
+    {
+      "name": "하이",
+      "id": "user002",
+      "pw": "12345678@",
+      "emailId": "user002",
+      "domain": "daum.net",
+      "birth": "000102"
+    },
+    {
+      "name": "전우치",
+      "id": "user003",
+      "pw": "12345678@",
+      "emailId": "user003",
+      "domain": "daum.net",
+      "birth": "000103"
+    },
+    {
+      "name": "user004",
+      "id": "user004",
+      "pw": "12345678@",
+      "emailId": "user004",
+      "domain": "daum.net",
+      "birth": "000104"
+    },
+    {
+      "name": "user005",
+      "id": "user005",
+      "pw": "12345678@",
+      "emailId": "user005",
+      "domain": "naver.com",
+      "birth": "000105"
+    },
+    {
+      "name": "user006",
+      "id": "user006",
+      "pw": "12345678@",
+      "emailId": "user006",
+      "domain": "naver.com",
+      "birth": "000106"
+    },
+    {
+      "name": "user007",
+      "id": "user007",
+      "pw": "12345678@",
+      "emailId": "user007",
+      "domain": "google.com",
+      "birth": "000107"
+    },
+    {
+      "name": "user008",
+      "id": "user008",
+      "pw": "12345678@",
+      "emailId": "user008",
+      "domain": "google.com",
+      "birth": "000108"
+    },
+    {
+      "name": "user009",
+      "id": "user009",
+      "pw": "12345678@",
+      "emailId": "user009",
+      "domain": "google.com",
+      "birth": "000109"
+    },
+    {
+      "name": "user0010",
+      "id": "user010",
+      "pw": "12345678@",
+      "emailId": "user0010",
+      "domain": "google.com",
+      "birth": "000110"
+    }
+  ],
+  "guest": [
+    {
+      "name": "김제동",
+      "pw": "1234567@",
+      "product": ["가죽소파", "엘리트 천연가죽 소파", "루체  가죽소파"],
+      "price": 39000,
+      "arrive": ""
+    },
+    {
+      "name": "이영희",
+      "pw": "pw1234!",
+      "product": [
+        "모던 리클라인 가죽소파",
+        "엘리트 천연가죽 소파",
+        "루체 블랙 가죽소파"
+      ],
+      "price": 27000,
+      "arrive": ""
+    },
+    {
+      "name": "박철수",
+      "pw": "pass5678$",
+      "product": [
+        "모던 리클라인 가죽소파",
+        "엘리트 천연가죽 소파",
+        "루체 블랙 가죽소파"
+      ],
+      "price": 45000,
+      "arrive": ""
+    },
+    {
+      "name": "최민수",
+      "pw": "minsu2024!",
+      "product": [
+        "모던 리클라인 가죽소파",
+        "엘리트 천연가죽 소파",
+        "루체 블랙 가죽소파"
+      ],
+      "price": 52000,
+      "arrive": ""
+    },
+    {
+      "name": "홍길동",
+      "pw": "hong9999!",
+      "product": [
+        "모던 리클라인 가죽소파",
+        "엘리트 천연가죽 소파",
+        "루체 블랙 가죽소파"
+      ],
+      "price": 36000,
+      "arrive": ""
+    },
+    {
+      "name": "서지은",
+      "pw": "gksdnr12@",
+      "product": [
+        "모던 리클라인 가죽소파",
+        "엘리트 천연가죽 소파",
+        "루체 블랙 가죽소파"
+      ],
+      "price": 49000,
+      "arrive": ""
+    },
+    {
+      "name": "윤하진",
+      "pw": "hj5678%",
+      "product": [
+        "모던 리클라인 가죽소파",
+        "엘리트 천연가죽 소파",
+        "루체 블랙 가죽소파"
+      ],
+      "price": 31000,
+      "arrive": ""
+    }
+  ]
+}

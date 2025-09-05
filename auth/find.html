@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/find.css" />
+  <link rel="stylesheet" href="./css/find.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--주소-->
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <!--user-->
+  <script type="module" src="./js/findJavascript.js" defer></script>
+</head>
+
+<body>
+  <div class="top_btn">
+    <img src="./images/icon/top_arrow.png" alt="위로 올리기" />
+  </div>
+  <header class="header">
+    <div class="header_top">
+      <div class="header_logo">
+        <a href="../index.html"><img src="./images/logo/로고.png" alt="브랜드로고" /></a>
+      </div>
+      <div class="header_top_right">
+        <nav class="header_top_gnb">
+          <ul>
+            <li><a href="#!">고객센터</a></li>
+            <li><a href="#!">장바구니</a></li>
+            <li><a href="./login.html">회원가입/로그인</a></li>
+          </ul>
+        </nav>
+        <div class="header_search">
+          <input type="search" placeholder="검색어를 입력하세요." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </div>
+    <nav class="header_bottom_gnb">
+      <ul class="main_gnb">
+        <li>
+          <a href="#!">주방가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">식탁세트</a></li>
+            <li><a href="#!">식탁테이블</a></li>
+            <li><a href="#!">식탁의자</a></li>
+            <li><a href="#!">식탁수납장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">침실가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">침대프레임</a></li>
+            <li><a href="#!">매트리스</a></li>
+            <li><a href="#!">침대세트</a></li>
+            <li><a href="#!">화장대</a></li>
+            <li><a href="#!">협탁</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="./sub_page/index.html" style="background-color: blue; color: #fff">거실가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="../index.html" style="color: blue">가죽소파</a></li>
+            <li><a href="#!">패브릭소파</a></li>
+            <li><a href="#!">거실장</a></li>
+            <li><a href="#!">수납장</a></li>
+            <li><a href="#!">거실테이블</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">수납가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">선반</a></li>
+            <li><a href="#!">수납장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">1인가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">침대프레임</a></li>
+            <li><a href="#!">매트리스</a></li>
+            <li><a href="#!">침대세트</a></li>
+            <li><a href="#!">화장대</a></li>
+            <li><a href="#!">협탁</a></li>
+            <li><a href="#!">거실장</a></li>
+            <li><a href="#!">수납장</a></li>
+            <li><a href="#!">거실테이블</a></li>
+            <li><a href="#!">스탠드</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">유아·아동</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">유아·아동</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">베스트</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">베스트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">기획전</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">기획전</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">리뷰</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">리뷰</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="gnb_bg"></div>
+    </nav>
+  </header>
+
+  <div class="find_wrap">
+    <form class="findIdForm">
+      <h2>아이디 찾기</h2>
+      <div class="find_box">
+        <label>이름</label>
+        <input type="text" name="name" required class="name_input" placeholder="이름을 입력하세요" />
+      </div>
+      <div class="find_box">
+        <label>생년월일</label><input type="text" name="birth" required class="birth_input" placeholder="ex-000000" />
+      </div>
+      <button type="submit" class="find_id_btn">아이디 찾기</button>
+      <p class="user_text_id"></p>
+    </form>
+
+    <!-- 비밀번호 찾기 폼 -->
+    <form class="findPwForm">
+      <h2>비밀번호 찾기</h2>
+      <div class="find_box">
+        <label>아이디</label>
+        <input type="text" name="id" required class="id_input" placeholder="아이디를 입려하세요" />
+      </div>
+      <div class="find_box">
+        <label>이메일 </label><input type="email" name="email" required class="email_input" placeholder="이메일을 입력하세요" />
+      </div>
+      <button type="submit" class="find_pw_btn">비밀번호 찾기</button>
+      <p class="user_text_pw"></p>
+    </form>
+  </div>
+  <div class="btn_box">
+    <a href="../login_page/index.html">로그인</a>
+    <a href="../sighUp_page/index.html">회원가입</a>
+  </div>
+  <footer class="footer">
+    <nav class="footer_gnb">
+      <ul>
+        <li><a href="#!">회사소개</a></li>
+        <li><a href="#!">회사소식</a></li>
+        <li><a href="#!">개인정보처리방침</a></li>
+        <li><a href="#!">이용약관</a></li>
+        <li><a href="#!">이용안내</a></li>
+        <li><a href="#!">광고/제휴 문의</a></li>
+        <li><a href="#!">대량구매 문의</a></li>
+      </ul>
+    </nav>
+    <div class="footer_bottom">
+      <div class="footer_bottom_left">
+        <div class="footer_logo">
+          <img src="./images/footer/로고.png" alt="" />
+        </div>
+        <div class="footer_text">
+          <p>상호명 : (주)가가가</p>
+          <p>대표자 : 김제동</p>
+          <p>주소 : 부산광역시 해운대구 좌동 (주)가가가</p>
+          <p>Tel : 010-9644-0928 <span>email : jedonge95@naver.com</span></p>
+          <p>
+            사업자등록번호 : 050-18-54504
+            <span>팩스번호 : 030-254-01565</span>
+          </p>
+          <p>개인정보관리자 : (주)가가가</p>
+        </div>
+      </div>
+      <div class="footer_bottom_right">
+        <p class="notice">고객센터</p>
+        <p class="notice_num">1577-1577</p>
+        <p class="notice_work">평일 09:00 ~ 18:00(주말 및 공휴일 휴무)</p>
+        <p class="notice_day">배송기간 : 수도권 5~10일, 지방 10 ~ 15일</p>
+        <div class="notice_btn">
+          <button>1:1문의하기</button>
+          <button>공지사항</button>
+        </div>
+      </div>
+      <div class="family_site_wrap">
+        <input type="checkbox" id="family_toggle" class="family_toggle_input" />
+        <label for="family_toggle" class="family_site">FAMILY SITE</label>
+        <ul class="family_site_list">
+          <li><a href="#!">naver</a></li>
+          <li><a href="#!">daum</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

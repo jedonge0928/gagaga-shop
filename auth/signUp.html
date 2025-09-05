@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/signUp.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--주소-->
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <!--user-->
+  <script type="module" src="./js/signUpJavascript.js" defer></script>
+</head>
+
+<body>
+  <div class="top_btn">
+    <img src="./images/logo/로고.png" alt="위로 올리기" />
+  </div>
+  <header class="header">
+    <div class="header_top">
+      <div class="header_logo">
+        <a href="../index.html"><img src="./images/logo/로고.png" alt="브랜드로고" /></a>
+      </div>
+      <div class="header_top_right">
+        <nav class="header_top_gnb">
+          <ul>
+            <li><a href="#!">고객센터</a></li>
+            <li><a href="#!">장바구니</a></li>
+            <li><a href="./login.html">회원가입/로그인</a></li>
+          </ul>
+        </nav>
+        <div class="header_search">
+          <input type="search" placeholder="검색어를 입력하세요." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </div>
+    <nav class="header_bottom_gnb">
+      <ul class="main_gnb">
+        <li>
+          <a href="#!">주방가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">식탁세트</a></li>
+            <li><a href="#!">식탁테이블</a></li>
+            <li><a href="#!">식탁의자</a></li>
+            <li><a href="#!">식탁수납장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">침실가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">침대프레임</a></li>
+            <li><a href="#!">매트리스</a></li>
+            <li><a href="#!">침대세트</a></li>
+            <li><a href="#!">화장대</a></li>
+            <li><a href="#!">협탁</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!" style="background-color: blue; color: #fff">거실가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!" style="color: blue">가죽소파</a></li>
+            <li><a href="#!">패브릭소파</a></li>
+            <li><a href="#!">거실장</a></li>
+            <li><a href="#!">수납장</a></li>
+            <li><a href="#!">거실테이블</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">수납가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">선반</a></li>
+            <li><a href="#!">수납장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">1인가구</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">침대프레임</a></li>
+            <li><a href="#!">매트리스</a></li>
+            <li><a href="#!">침대세트</a></li>
+            <li><a href="#!">화장대</a></li>
+            <li><a href="#!">협탁</a></li>
+            <li><a href="#!">거실장</a></li>
+            <li><a href="#!">수납장</a></li>
+            <li><a href="#!">거실테이블</a></li>
+            <li><a href="#!">스탠드</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">유아·아동</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">유아·아동</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">베스트</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">베스트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">기획전</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">기획전</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">리뷰</a>
+          <ul class="main_gnb_sub">
+            <li><a href="#!">리뷰</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="gnb_bg"></div>
+    </nav>
+  </header>
+
+  <div class="sign_up_wrap">
+    <h2>회원가입</h2>
+    <form action="">
+      <div class="Basic_infor">
+        <h3>기본정보 등록</h3>
+        <div class="profile_card">
+          <div class="profile_preview">
+            <img class="previewImage" src="" />
+          </div>
+          <div class="upload_btn_box">
+            <input type="file" id="profileImage" class="profileImage_input" />
+            <label for="profileImage" class="upload_btn">프로필 사진 등록</label>
+          </div>
+        </div>
+        <div class="gender">
+          <label>성별</label>
+          <input type="radio" name="gender" id="man" />
+          <input type="radio" name="gender" id="woman" />
+          <div class="gender_box">
+            <label for="man" class="man">남성</label>
+            <label for="woman" class="woman">여성</label>
+          </div>
+        </div>
+      </div>
+      <div class="email_box">
+        <label for="email" class="required">이메일</label>
+        <div class="email">
+          <input id="email" type="text" class="email_input" placeholder="xxxxx" required />
+          <span>@</span>
+          <div class="select_domain">
+            <div class="select_domain_input">
+              <input id="domain" type="text" placeholder="선택 또는 입력" class="domain_input" required />
+              <i class="fa-solid fa-caret-down"></i>
+              <i class="fa-solid fa-caret-up"></i>
+            </div>
+            <div class="option_custom">
+              <div class="option">naver.com</div>
+              <div class="option">daum.net</div>
+              <div class="option">google.com</div>
+            </div>
+          </div>
+          <button class="email_check_btn">이메일중복확인</button>
+        </div>
+      </div>
+
+      <div class="check_box">
+        <div class="id_check_box">
+          <label for="id" class="required">아이디</label>
+          <span class="id_check input_span">5~10글자이상의 아이디를 입력해주세요.</span>
+          <div class="id_box">
+            <input id="id" type="text" class="id_auth" placeholder="아이디를 입력하세요" required />
+            <button type="button">아이디 확인</button>
+          </div>
+          <span class="id_text"></span>
+        </div>
+
+        <div class="password_box">
+          <div class="password01">
+            <label for="pw" class="required">비밀번호</label>
+            <span class="input_span">8~16글자이상, 특수문자 포함 비밀번호를 입력해주세요.</span>
+            <div class="password_input">
+              <input id="pw" type="password" placeholder="비밀번호" required />
+              <div class="eye">
+                <img src="./images/icon/eye.on.png" alt="" />
+                <img src="./images/icon/eye_off.png" alt="" />
+              </div>
+            </div>
+            <span class="password_text"></span>
+          </div>
+          <div class="password_check">
+            <label for="pw2" class="required">비밀번호확인</label>
+            <input id="pw2" type="password" class="password__check_input" placeholder="비밀번호 확인" required />
+          </div>
+        </div>
+
+        <div class="phone">
+          <label for="tel_first" class="required">전화번호</label>
+          <div class="phone_box">
+            <select id="tel_first">
+              <option value="010">010</option>
+              <option value="011">011</option>
+            </select>
+            <span>-</span>
+            <input type="text" id="tel_second" maxlength="4" class="tel_second" required />
+            <span>-</span>
+            <input type="text" id="tel_third" maxlength="4" class="tel_third" required />
+            <button type="button" class="phone_check">인증번호받기</button>
+          </div>
+          <div class="phone_auth_box">
+            <input id="phoneAuth" type="text" maxlength="6" class="phone_auth_check" />
+            <span class="phone_auth_time">03:00</span>
+            <button class="phone_auth_check_btn">인증완료</button>
+          </div>
+          <p class="auth_number"></p>
+        </div>
+
+        <div class="adress_box">
+          <label for="addrSearch" class="required">주소등록</label>
+          <div class="adress_number">
+            <input id="addrSearch" type="text" class="adress_number_box" placeholder="우편번호" required />
+            <button type="button">주소검색</button>
+          </div>
+          <input id="addrBase" type="text" placeholder="기본주소" class="adress" required />
+          <input id="addrDetail" type="text" placeholder="상세주소" class="adress_detail" required />
+        </div>
+
+        <div class="Agree_to_terms">
+          <label class="required">이용약관</label>
+          <ul>
+            <li>
+              <input type="checkbox" id="total_terms" />
+              <label for="total_terms">전체약관 동의</label>
+            </li>
+            <li>
+              <input type="checkbox" id="terms_01" class="terms_el" required />
+              <label for="terms_01">만 14세 이상입니다.(필수)</label>
+            </li>
+            <li>
+              <input type="checkbox" id="terms_02" class="terms_el" required />
+              <label for="terms_02">이용약관(필수)</label>
+            </li>
+            <li>
+              <input type="checkbox" id="terms_03" class="terms_el" />
+              <label class="terms_03" for="terms_03">개인정보 마케팅 활용 동의(선택)</label>
+            </li>
+            <li>
+              <input type="checkbox" id="terms_04" class="terms_el" />
+              <label class="terms_04" for="terms_04">이벤트, 쿠폰, 특가 알람 메일 및 SNS 등 수신(선택)</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="form_btn" type="submit">회원가입</button>
+    </form>
+  </div>
+  <footer class="footer">
+    <nav class="footer_gnb">
+      <ul>
+        <li><a href="#!">회사소개</a></li>
+        <li><a href="#!">회사소식</a></li>
+        <li><a href="#!">개인정보처리방침</a></li>
+        <li><a href="#!">이용약관</a></li>
+        <li><a href="#!">이용안내</a></li>
+        <li><a href="#!">광고/제휴 문의</a></li>
+        <li><a href="#!">대량구매 문의</a></li>
+      </ul>
+    </nav>
+    <div class="footer_bottom">
+      <div class="footer_bottom_left">
+        <div class="footer_logo">
+          <img src="./images/footer/로고.png" alt="" />
+        </div>
+        <div class="footer_text">
+          <p>상호명 : (주)가가가</p>
+          <p>대표자 : 김제동</p>
+          <p>주소 : 부산광역시 해운대구 좌동 (주)가가가</p>
+          <p>Tel : 010-9644-0928 <span>email : jedonge95@naver.com</span></p>
+          <p>
+            사업자등록번호 : 050-18-54504
+            <span>팩스번호 : 030-254-01565</span>
+          </p>
+          <p>개인정보관리자 : (주)가가가</p>
+        </div>
+      </div>
+      <div class="footer_bottom_right">
+        <p class="notice">고객센터</p>
+        <p class="notice_num">1577-1577</p>
+        <p class="notice_work">평일 09:00 ~ 18:00(주말 및 공휴일 휴무)</p>
+        <p class="notice_day">배송기간 : 수도권 5~10일, 지방 10 ~ 15일</p>
+        <div class="notice_btn">
+          <button>1:1문의하기</button>
+          <button>공지사항</button>
+        </div>
+      </div>
+      <div class="family_site_wrap">
+        <input type="checkbox" id="family_toggle" class="family_toggle_input" />
+        <label for="family_toggle" class="family_site">FAMILY SITE</label>
+        <ul class="family_site_list">
+          <li><a href="#!">naver</a></li>
+          <li><a href="#!">daum</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
