@@ -64,13 +64,17 @@ renderPagination(dataArray, navContainer, section, callback)
 
 <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8dbe8570-87a6-4e68-afba-a970a54398c1" />
 
+
 - 리뷰 작성 기능 (localStorage 저장)
+
+
+  1. 리뷰구조
   
-  1. 리뷰구조<img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/74354a72-2a48-4299-9bb0-9abd7893af24" />
+  <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/74354a72-2a48-4299-9bb0-9abd7893af24" />
   
-   2. 리뷰 수정(find) =>  const item = data.find((item) => item.id === id);
+  2. 리뷰 수정(find) =>  const item = data.find((item) => item.id === id);
       
-   3. 리뷰 삭제(filter) => const newData = data.filter((item) => item.id !== id);
+  3. 리뷰 삭제(filter) => const newData = data.filter((item) => item.id !== id);
       
 
  수량 조절 (숫자 증감 버튼)
@@ -82,29 +86,40 @@ renderPagination(dataArray, navContainer, section, callback)
 ###  로그인 / 회원가입
 
 - `data.json`을 활용한 유저 데이터 처리
-  
--  <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8e5f9b9e-bd84-4dd1-9eed-48aa3060bd04" />
 
+
+<img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8e5f9b9e-bd84-4dd1-9eed-48aa3060bd04" />
+
+  
      1.아이디 찾기(이름과 생년월일 정보가 일치할 시)
 
+
      1) const userInfor = findUserList.find((user) => user.name === nameInput.value && user.birth === birthInput.value);
+
    
    2.비밀번호 찾기(유저 아이디와 이메일 정보가 일치할 시)
 
+
      1)const userInfor = findUserList.find((user) =user.id === idInput.value.trim() &&`${user.emailId}@${user.domain}` === emailInput.value.trim());
 
+
  프로필 이미지 업로드
+
 
  <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/39654b14-cee5-4b16-9efe-9bd1e7f30698" />
 
 
  다음 주소 검색 API 연동
 
+
  <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/51383868-68e7-413e-9f16-69ad9911d6b2" />
 
+
 - (회원가입form)입력 정보는 localStorage에 저장 및 유지
-- 
+
+
 <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/e523e51b-f8d7-4f2a-ac99-ba65e48000f5" />
+
 
 이때 newUser는 input에 입력한 값을 말합니다.
 
