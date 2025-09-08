@@ -68,13 +68,18 @@ renderPagination(dataArray, navContainer, section, callback)
 - 리뷰 작성 기능 (localStorage 저장)
 
 
-  1. 리뷰구조
+1. 리뷰구조
+
+<br/>
+
+<img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/74354a72-2a48-4299-9bb0-9abd7893af24" />
+
   
-  <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/74354a72-2a48-4299-9bb0-9abd7893af24" />
-  
-  2. 리뷰 수정(find) =>  const item = data.find((item) => item.id === id);
+2. 리뷰 수정(find) =>  const item = data.find((item) => item.id === id);
       
-  3. 리뷰 삭제(filter) => const newData = data.filter((item) => item.id !== id);
+      
+      
+3. 리뷰 삭제(filter) => const newData = data.filter((item) => item.id !== id);
       
 
  수량 조절 (숫자 증감 버튼)
