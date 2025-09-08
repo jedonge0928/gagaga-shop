@@ -8,7 +8,7 @@
 - 
 - **JavaScript** (Vanilla JS)
 - 
-- **Kakao 주소 검색 API**
+- **daum 주소 검색 API**
 - 
 - **LocalStorage** / JSON 파일
 
