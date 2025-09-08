@@ -79,7 +79,7 @@ renderPagination(dataArray, navContainer, section, callback)
       
       
       
-3. 리뷰 삭제(filter) => const newData = data.filter((item) => item.id !== id);
+3. 리뷰 삭제(filter) => const deleteData = data.filter((item) => item.id !== id);
       
 
  수량 조절 (숫자 증감 버튼)
@@ -149,7 +149,8 @@ renderPagination(dataArray, navContainer, section, callback)
 
 - 순수 JS만으로 DOM 제어, 이벤트 바인딩, 클래스 조작 등 구현
 
-- scrollTop 버튼, 탭 UI, 슬라이더 등의 UX 중심 기능 직접 설계
+-scrollTop 버튼, 탭 UI, 슬라이더 등의 UX 중심 기능 직접 설계
+
 
 ###  LocalStorage를 통한 데이터 저장/관리
 
