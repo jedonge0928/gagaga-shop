@@ -3,13 +3,13 @@
 
 
 - **HTML**
-- 
+
 - **CSS** (Flexbox 중심 레이아웃)
-- 
+ 
 - **JavaScript** (Vanilla JS)
-- 
+ 
 - **daum 주소 검색 API**
-- 
+
 - **LocalStorage** / JSON 파일
 
 ---
