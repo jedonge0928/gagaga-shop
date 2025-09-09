@@ -33,6 +33,7 @@
 -모든 슬라이드에서 active 클래스를 제거한 뒤, 전달받은 index의 슬라이드에만 active 클래스를 추가
 
 <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/f2bb07c3-1541-47d6-8ac5-44e2c2b38105" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/cb268f86-5b3b-4eed-900a-11792d917d5e" />
 
 
 ### 서브 페이지 (상품 목록)
