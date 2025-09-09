@@ -95,8 +95,6 @@ renderPagination(dataArray, navContainer, section, callback)
 
 
 
-https://github.com/user-attachments/assets/8204cc3b-b77c-4aa0-ab0e-f74e414a6bf4
-
 
 
  
@@ -146,7 +144,10 @@ https://github.com/user-attachments/assets/8204cc3b-b77c-4aa0-ab0e-f74e414a6bf4
 
 
 
-Uploading 가가가 - 집에 가치를 더하다 - Chrome 2025-09-09 10-02-30.mp4…
+
+https://github.com/user-attachments/assets/081a7c45-e961-4af6-96a2-31d86a0310fa
+
+
 
 
 
