@@ -160,18 +160,14 @@ const pageNavList = [
 
 ### 상세 페이지
 
--제품 이미지 선택
+- 사용자가 작성한 리뷰는 `localStorage`에 저장되며, 이미지, 별점, 제목, 텍스트를 포함합니다.
 
-<img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8dbe8570-87a6-4e68-afba-a970a54398c1" />
+- **작성 후 자동 렌더링**, **수정 시 값 채워짐**, **삭제 시 해당 항목 제거** 기능 구현.
 
+-리뷰 작성 기능 (localStorage 저장)
 
-- 리뷰 작성 기능 (localStorage 저장)
-
-<br/>
 
 ### 1.리뷰구조
-
-<br/>
 
 <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/74354a72-2a48-4299-9bb0-9abd7893af24" />
 
@@ -196,29 +192,60 @@ const pageNavList = [
 ###  로그인 / 회원가입
 
 - `data.json`을 활용한 유저 데이터 처리
+```
+ let findUserList = [];
 
+  const findUserFetch = async () => {
+    try {
+      const response = await fetch("/userData.json");
 
-<img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8e5f9b9e-bd84-4dd1-9eed-48aa3060bd04" />
+      if (!response.ok) {
+        alert("데이터 실패");
+        return [];
+      }
+      const result = await response.json();
+      return result;
+    } catch (err) {
+      alert("에러발생");
+      return [];
+    }
+  };
 
-  
+  findUserFetch().then((result) => {
+    findUserList = result.user;
+    console.log(findUserList);
+  });
+  ```
      1.아이디 찾기(이름과 생년월일 정보가 일치할 시)
 
 
-     1) const userInfor = findUserList.find((user) => user.name === nameInput.value && user.birth === birthInput.value);
+  ```const userInfor = findUserList.find((user) => user.name === nameInput.value && user.birth === birthInput.value);```
 
    
    2.비밀번호 찾기(유저 아이디와 이메일 정보가 일치할 시)
 
 
-     1)const userInfor = findUserList.find((user) =user.id === idInput.value.trim() &&`${user.emailId}@${user.domain}` === emailInput.value.trim());
+    ```const userInfor = findUserList.find((user) =user.id === idInput.value.trim() &&`${user.emailId}@${user.domain}` === emailInput.value.trim());```
 
 
  프로필 이미지 업로드
 
+```
+const profileInput = document.getElementById("profileImage");
+  const previewImg = document.querySelector(".previewImage");
 
- <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/39654b14-cee5-4b16-9efe-9bd1e7f30698" />
+  profileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (!file) {
+      return;
+    } else if (!file.type.startsWith("image/")) {
+      alert("이미지 파일만 업로드 가능합니다.");
+      return;
+    }
+    previewImg.src = URL.createObjectURL(file);
+  });
 
-
+``
  다음 주소 검색 API 연동
 
 
