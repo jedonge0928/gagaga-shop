@@ -229,11 +229,9 @@ const pageNavList = [
    
    2.비밀번호 찾기(유저 아이디와 이메일 정보가 일치할 시)
 
-
     ``` 
     const userInfor = findUserList.find((user) =user.id === idInput.value.trim() &&`${user.emailId}@${user.domain}` === emailInput.value.trim());
     ```
-
 
  프로필 이미지 업로드
 
