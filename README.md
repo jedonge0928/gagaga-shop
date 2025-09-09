@@ -32,7 +32,29 @@
 
 -모든 슬라이드에서 active 클래스를 제거한 뒤, 전달받은 index의 슬라이드에만 active 클래스를 추가
 
-<img width="517" height="439" alt="image" src="https://github.com/user-attachments/assets/337bde67-9e10-428e-8d01-077a4e34ca0d" />
+```
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".banner_left_img");
+  let current = 0;
+  const intervalTime = 3000;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) {
+        slide.classList.add("active");
+      }
+    });
+  }
+
+  function startSlider() {
+    showSlide(current);
+    current = (current + 1) % slides.length;
+  }
+  showSlide(current);
+  setInterval(startSlider, intervalTime);
+});
+```
 
 
 ### 서브 페이지 (상품 목록) -
