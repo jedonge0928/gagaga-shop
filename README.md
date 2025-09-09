@@ -24,66 +24,15 @@
 
 -메인배너 슬라이드
 
--.banner_left_img 클래스를 가진 모든 슬라이드 이미지 요소들을 선택 : const slides = document.querySelectorAll(".banner_left_img");
+-.banner_left_img 클래스를 가진 모든 슬라이드 이미지 요소들을 선택 : ``` const slides = document.querySelectorAll(".banner_left_img");```
 
--현재 보여줄 슬라이드의 인덱스를 추적하는 변수 : let current = 0;
+-현재 보여줄 슬라이드의 인덱스를 추적하는 변수 : ```  let current = 0; ```
 
--슬라이드가 전환되는 시간 : const intervalTime = 3000;
-
--모든 슬라이드에서 active 클래스를 제거한 뒤, 전달받은 index의 슬라이드에만 active 클래스를 추가
-
-<img width="517" height="439" alt="image" src="https://github.com/user-attachments/assets/337bde67-9e10-428e-8d01-077a4e34ca0d" />
-
-
-
-
-
-
-
-### 서브 페이지 (상품 목록) -
-
-
-기능 :  동적 페이지 버튼 생성 => 	데이터 길이에 따라 자동 계산
-# 가가가 - 가구 쇼핑몰 홈페이지  
-> **가: 집에 가치를 더하다**
-
-
-- **HTML**
-
-- **CSS** (Flexbox 중심 레이아웃)
- 
-- **JavaScript** (Vanilla JS)
- 
-- **daum 주소 검색 API**
-
-- **LocalStorage** / JSON 파일
-
----
-
-## 주요 기능
-
-###  메인 페이지
-
-- 상단 이동 버튼 (`scrollTopButton`)
-  
-- 탭 전환 UI (카테고리, 추천 상품 등)
-
--메인배너 슬라이드
-
--.banner_left_img 클래스를 가진 모든 슬라이드 이미지 요소들을 선택 : const slides = document.querySelectorAll(".banner_left_img");
-
--현재 보여줄 슬라이드의 인덱스를 추적하는 변수 : let current = 0;
-
--슬라이드가 전환되는 시간 : const intervalTime = 3000;
+-슬라이드가 전환되는 시간 :  ``` const intervalTime = 3000;```
 
 -모든 슬라이드에서 active 클래스를 제거한 뒤, 전달받은 index의 슬라이드에만 active 클래스를 추가
 
 <img width="517" height="439" alt="image" src="https://github.com/user-attachments/assets/337bde67-9e10-428e-8d01-077a4e34ca0d" />
-
-
-
-
-
 
 
 ### 서브 페이지 (상품 목록) -
@@ -103,7 +52,7 @@
 itemList: 각 상품 카테고리 데이터 배열 (ex. leatherSofa, fabricSofa 등). :  const itemList = [leatherSofa, fabricSofa, storageCloset, livingRoomTable];
 
 sectionList: 각 카테고리에 해당하는 DOM 영역. 
-
+```
 :const sectionList = [
   document.querySelector(".leather_sofa"),
   document.querySelector(".fabric_sofa"),
@@ -120,11 +69,15 @@ const pageNavList = [
   document.querySelector(".pagination.living"),
 ];
 
-renderPagination(dataArray, navContainer, section, callback)
+
+```
+
 
 페이지 버튼(숫자, 이전/다음 버튼) 생성.
 
 /*이전*/
+
+```
  -const prevBtn = document.createElement("button");
 
   prevBtn.innerHTML = `<img src="./images/icon/오른쪽.png" alt="이전">`;
@@ -138,9 +91,9 @@ renderPagination(dataArray, navContainer, section, callback)
   });
 
   navContainer.appendChild(prevBtn);
-
+```
  /*숫자*/
- 
+ ```
    const pageButtons = [];
   for (let i = 1; i <= totalPages; i++) {
     const btn = document.createElement("button");
@@ -155,10 +108,10 @@ renderPagination(dataArray, navContainer, section, callback)
     navContainer.appendChild(btn);
   }
 
-  
+  ```
  /*다음*/
-
-  (const nextBtn = document.createElement("button");
+```
+  const nextBtn = document.createElement("button");
 
   nextBtn.innerHTML = `<img src="./images/icon/왼쪽.png" alt="다음">`;
 
@@ -174,8 +127,8 @@ renderPagination(dataArray, navContainer, section, callback)
     
   });
   
-  navContainer.appendChild(nextBtn);)
-
+  navContainer.appendChild(nextBtn);
+```
 
 
 
