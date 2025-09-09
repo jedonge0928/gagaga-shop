@@ -112,18 +112,23 @@ renderPagination(dataArray, navContainer, section, callback)
   
  /*다음*/
 
-  const nextBtn = document.createElement("button");
+  (const nextBtn = document.createElement("button");
 
   nextBtn.innerHTML = `<img src="./images/icon/왼쪽.png" alt="다음">`;
 
   nextBtn.addEventListener("click", () => {
+  
     if (currentPage < totalPages) {
+    
       currentPage++;
+      
       updatePage();
+      
     }
+    
   });
-
-  navContainer.appendChild(nextBtn);
+  
+  navContainer.appendChild(nextBtn);)
 
 
 
