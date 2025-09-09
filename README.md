@@ -192,6 +192,7 @@ const pageNavList = [
 ###  로그인 / 회원가입
 
 - `data.json`을 활용한 유저 데이터 처리
+
 ```
  let findUserList = [];
 
@@ -216,16 +217,21 @@ const pageNavList = [
     console.log(findUserList);
   });
   ```
+
      1.아이디 찾기(이름과 생년월일 정보가 일치할 시)
 
 
-  ```const userInfor = findUserList.find((user) => user.name === nameInput.value && user.birth === birthInput.value);```
+  ```
+  const userInfor = findUserList.find((user) => user.name === nameInput.value && user.birth === birthInput.value);
+```
 
    
    2.비밀번호 찾기(유저 아이디와 이메일 정보가 일치할 시)
 
 
-    ```const userInfor = findUserList.find((user) =user.id === idInput.value.trim() &&`${user.emailId}@${user.domain}` === emailInput.value.trim());```
+    ``` 
+    const userInfor = findUserList.find((user) =user.id === idInput.value.trim() &&`${user.emailId}@${user.domain}` === emailInput.value.trim());
+    ```
 
 
  프로필 이미지 업로드
