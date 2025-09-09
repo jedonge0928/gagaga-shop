@@ -40,23 +40,98 @@
 
 
 
-### 서브 페이지 (상품 목록)
+### 서브 페이지 (상품 목록) -
+
+
+기능 :  동적 페이지 버튼 생성 => 	데이터 길이에 따라 자동 계산
+
+  navContainer.innerHTML = "";
+
+  const totalPages = Math.ceil(dataArray.length / itemsPerPage);
+
+  let currentPage = 1;
+
 
 - 주요 구성 요소
 
-itemList: 각 상품 카테고리 데이터 배열 (ex. leatherSofa, fabricSofa 등).
+itemList: 각 상품 카테고리 데이터 배열 (ex. leatherSofa, fabricSofa 등). :  const itemList = [leatherSofa, fabricSofa, storageCloset, livingRoomTable];
 
-sectionList: 각 카테고리에 해당하는 DOM 영역.
+sectionList: 각 카테고리에 해당하는 DOM 영역. 
+
+:const sectionList = [
+  document.querySelector(".leather_sofa"),
+  document.querySelector(".fabric_sofa"),
+  document.querySelector(".storage_closet"),
+  document.querySelector(".living_room_table"),
+];
 
 pageNavList: 각 카테고리별 페이지네이션 버튼 영역.
+
+const pageNavList = [
+  document.querySelector(".pagination.leather"),
+  document.querySelector(".pagination.fabric"),
+  document.querySelector(".pagination.storage"),
+  document.querySelector(".pagination.living"),
+];
 
 renderPagination(dataArray, navContainer, section, callback)
 
 페이지 버튼(숫자, 이전/다음 버튼) 생성.
 
-페이지 클릭 시 renderItems 호출하여 해당 페이지 데이터 출력.
+/*이전*/
+ -const prevBtn = document.createElement("button");
 
-현재 페이지는 .active 클래스 적용.
+  prevBtn.innerHTML = `<img src="./images/icon/오른쪽.png" alt="이전">`;
+
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+
+      updatePage();
+    }
+  });
+
+  navContainer.appendChild(prevBtn);
+
+ /*숫자*/
+ 
+   const pageButtons = [];
+
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+
+    btn.textContent = i;
+
+    if (i === 1) btn.classList.add("active");
+
+    btn.addEventListener("click", () => {
+      currentPage = i;
+
+      updatePage();
+    });
+
+    pageButtons.push(btn);
+
+    navContainer.appendChild(btn);
+  }
+
+  
+ /*다음*/
+
+  const nextBtn = document.createElement("button");
+
+  nextBtn.innerHTML = `<img src="./images/icon/왼쪽.png" alt="다음">`;
+
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+
+      updatePage();
+    }
+  });
+
+  navContainer.appendChild(nextBtn);
+
 
 
 
