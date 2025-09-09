@@ -21,26 +21,21 @@
 - 상단 이동 버튼 (`scrollTopButton`)
   
 - 탭 전환 UI (카테고리, 추천 상품 등)
-  
-- Swiper.js를 활용한 이미지 슬라이더
+
+-메인배너 슬라이드
+
+-.banner_left_img 클래스를 가진 모든 슬라이드 이미지 요소들을 선택 : const slides = document.querySelectorAll(".banner_left_img");
+
+-현재 보여줄 슬라이드의 인덱스를 추적하는 변수 : let current = 0;
+
+-슬라이드가 전환되는 시간 : const intervalTime = 3000;
+
+-모든 슬라이드에서 active 클래스를 제거한 뒤, 전달받은 index의 슬라이드에만 active 클래스를 추가
+
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/f2bb07c3-1541-47d6-8ac5-44e2c2b38105" />
+
 
 ### 서브 페이지 (상품 목록)
-
-- 상품 데이터 출력 (배열 map 반복)
-  
-- 페이지네이션 기능 구현
-  
-- `input:checked`를 활용한 탭 전환
-  
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/70b61a97-f42e-4e76-8cb5-f57bb54dce12" />
-
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/b9578e7c-143e-4639-945b-39447dd1fca2" />
-
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/263b1f3f-5fcd-4dac-80c7-03be3991d663" />
-
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/f70062c0-c0f0-435e-b1c2-e5b86a032946" />
-
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/72585980-4bdf-4dd8-8264-1e3a420bac2e" />
 
 - 주요 구성 요소
 
