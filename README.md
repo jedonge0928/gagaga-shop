@@ -96,22 +96,16 @@ renderPagination(dataArray, navContainer, section, callback)
  /*숫자*/
  
    const pageButtons = [];
-
   for (let i = 1; i <= totalPages; i++) {
     const btn = document.createElement("button");
-
     btn.textContent = i;
-
     if (i === 1) btn.classList.add("active");
 
     btn.addEventListener("click", () => {
       currentPage = i;
-
       updatePage();
     });
-
     pageButtons.push(btn);
-
     navContainer.appendChild(btn);
   }
 
@@ -125,7 +119,6 @@ renderPagination(dataArray, navContainer, section, callback)
   nextBtn.addEventListener("click", () => {
     if (currentPage < totalPages) {
       currentPage++;
-
       updatePage();
     }
   });
