@@ -216,11 +216,12 @@ const pageNavList = [
     findUserList = result.user;
     console.log(findUserList);
   });
+
   ```
 <br />
+
   1.아이디 찾기(이름과 생년월일 정보가 일치할 시)
 
-<br/>
   ```
   const userInfor = findUserList.find((user) => user.name === nameInput.value && user.birth === birthInput.value);
 ```
