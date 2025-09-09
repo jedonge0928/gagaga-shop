@@ -36,7 +36,7 @@
 
 
 
-https://github.com/user-attachments/assets/824d2dec-8dc2-4065-9789-821c1473005d
+
 
 
 
@@ -60,7 +60,7 @@ renderPagination(dataArray, navContainer, section, callback)
 
 
 
-https://github.com/user-attachments/assets/541c1800-4447-427c-878d-6856012e942b
+
 
 
 
@@ -92,7 +92,6 @@ https://github.com/user-attachments/assets/541c1800-4447-427c-878d-6856012e942b
 
 
 
-https://github.com/user-attachments/assets/39a16dd3-c591-4f49-ac8b-dc46b81252f3
 
 
 
