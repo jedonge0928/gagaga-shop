@@ -36,6 +36,10 @@
 
 
 
+https://github.com/user-attachments/assets/824d2dec-8dc2-4065-9789-821c1473005d
+
+
+
 ### 서브 페이지 (상품 목록)
 
 - 주요 구성 요소
@@ -53,6 +57,12 @@ renderPagination(dataArray, navContainer, section, callback)
 페이지 클릭 시 renderItems 호출하여 해당 페이지 데이터 출력.
 
 현재 페이지는 .active 클래스 적용.
+
+
+
+https://github.com/user-attachments/assets/541c1800-4447-427c-878d-6856012e942b
+
+
 
 ### 상세 페이지
 
@@ -79,11 +89,18 @@ renderPagination(dataArray, navContainer, section, callback)
 ### 3. 리뷰 삭제(filter) => const deleteData = data.filter((item) => item.id !== id);
       
 
- 수량 조절 (숫자 증감 버튼)
- 
- 옵션 선택 시 텍스트 동적 변경
 
- `input:checked` 기반 탭 구조
+
+
+https://github.com/user-attachments/assets/39a16dd3-c591-4f49-ac8b-dc46b81252f3
+
+
+
+https://github.com/user-attachments/assets/8204cc3b-b77c-4aa0-ab0e-f74e414a6bf4
+
+
+
+ 
 
 ###  로그인 / 회원가입
 
@@ -127,13 +144,26 @@ renderPagination(dataArray, navContainer, section, callback)
 
 ---
 
+
+
+
+Uploading 가가가 - 집에 가치를 더하다 - Chrome 2025-09-09 10-02-30.mp4…
+
+
+
+
+
+
+
+
+
 ##  배포
 
 - **닷홈(dothome)** 웹호스팅을 활용하여 배포 완료
 - 
 - HTML/CSS/JS/images 등의 정적 파일을 직접 업로드하여   **브라우저에서 사용자 접근 가능**
 
-
+ 
 ## 설계 및 구현에서 배운 점
 
 ###  레이아웃 구성 능력 향상
