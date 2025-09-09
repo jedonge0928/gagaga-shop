@@ -141,22 +141,6 @@ renderPagination(dataArray, navContainer, section, callback)
 
 ---
 
-
-
-
-
-https://github.com/user-attachments/assets/081a7c45-e961-4af6-96a2-31d86a0310fa
-
-
-
-
-
-
-
-
-
-
-
 ##  배포
 
 - **닷홈(dothome)** 웹호스팅을 활용하여 배포 완료
