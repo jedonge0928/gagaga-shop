@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 ```
 
+<img width="117" height="115" alt="image" src="https://github.com/user-attachments/assets/44301727-45f5-4206-8836-4586310e4dae" />
+
 
 -메인배너 슬라이드
 
@@ -61,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(startSlider, intervalTime);
 });
 ```
+
+<img width="1906" height="521" alt="image" src="https://github.com/user-attachments/assets/e84ee8ff-b435-43ea-842b-ce211336bd71" />
 
 
 ### 서브 페이지 (상품 목록) -
@@ -158,6 +162,7 @@ const pageNavList = [
   navContainer.appendChild(nextBtn);
 ```
 
+<img width="515" height="696" alt="image" src="https://github.com/user-attachments/assets/ed5bb72b-a60c-43e2-9841-449cba747875" />
 
 
 
@@ -165,6 +170,9 @@ const pageNavList = [
 
 
 ### 상세 페이지
+
+
+
 
 - 사용자가 작성한 리뷰는 `localStorage`에 저장되며, 이미지, 별점, 제목, 텍스트를 포함합니다.
 
@@ -249,8 +257,15 @@ const originalRender = () => {
   };
 
 ```
+<img width="1062" height="677" alt="image" src="https://github.com/user-attachments/assets/7e449aae-8744-434f-a4b9-1b4424f4e6d8" />
+
+<img width="1154" height="712" alt="image" src="https://github.com/user-attachments/assets/1203866d-a0f4-4f5c-a0b7-42f3ed589076" />
+
 
 ###  로그인 / 회원가입
+
+<img width="587" height="542" alt="image" src="https://github.com/user-attachments/assets/05584495-1c1a-43d9-8dc3-89b84b43382f" />
+
 
  #### `data.json`을 활용한 유저 데이터 처리
 
@@ -280,6 +295,9 @@ const originalRender = () => {
 
   ```
 <br />
+
+<img width="556" height="660" alt="image" src="https://github.com/user-attachments/assets/e53a6294-c776-498d-ae81-be038499ffa5" />
+
 
   #### 1.아이디 찾기(이름과 생년월일 정보가 일치할 시)
 
@@ -335,6 +353,7 @@ const profileInput = document.getElementById("profileImage");
   });
 
 ```
+<img width="393" height="784" alt="image" src="https://github.com/user-attachments/assets/9e562b21-806b-4ffb-846e-b55a415bfe3f" />
 
 
 ##  배포
