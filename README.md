@@ -1,17 +1,6 @@
 # 가가가 - 가구 쇼핑몰 홈페이지  
 > **가: 집에 가치를 더하다**
 
-
-- **HTML**
-
-- **CSS** (Flexbox 중심 레이아웃)
- 
-- **JavaScript** (Vanilla JS)
- 
-- **daum 주소 검색 API**
-
-- **LocalStorage** / JSON 파일
-
 ---
 
 ## 주요 기능
@@ -19,18 +8,35 @@
 ###  메인 페이지
 
 - 상단 이동 버튼 (`scrollTopButton`)
-  
-- 탭 전환 UI (카테고리, 추천 상품 등)
+
+```
+document.addEventListener("DOMContentLoaded", function () {
+  const top = document.querySelector(".top_btn");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= 200) {
+      top.classList.add("show");
+    } else {
+      top.classList.remove("show");
+    }
+  });
+
+  top.addEventListener("click", function () {
+    const scrollToTop = setInterval(() => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll <= 0) {
+        clearInterval(scrollToTop);
+      } else {
+        window.scrollBy(0, -30);
+      }
+    });
+  });
+});
+```
+
 
 -메인배너 슬라이드
-
--.banner_left_img 클래스를 가진 모든 슬라이드 이미지 요소들을 선택 : ``` const slides = document.querySelectorAll(".banner_left_img");```
-
--현재 보여줄 슬라이드의 인덱스를 추적하는 변수 : ```  let current = 0; ```
-
--슬라이드가 전환되는 시간 :  ``` const intervalTime = 3000;```
-
--모든 슬라이드에서 active 클래스를 제거한 뒤, 전달받은 index의 슬라이드에만 active 클래스를 추가
 
 ```
 document.addEventListener("DOMContentLoaded", () => {
@@ -169,29 +175,84 @@ const pageNavList = [
 
 ### 1.리뷰구조
 
-<img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/74354a72-2a48-4299-9bb0-9abd7893af24" />
+```
+const originalRender = () => {
+    const reviewList = document.querySelector(".list_slide");
+    const dataList = JSON.parse(localStorage.getItem("reviewList")) || [];
+
+    reviewList.innerHTML = "";
+    dataList.forEach((item) => {
+      const div = document.createElement("div");
+      div.innerHTML = `
+        <div class="reviewBox" data-id="${item.id}">
+          <div class="review_img">
+            ${item.img ? `<img src="${item.img}" />` : "이미지 없음"}
+          </div>
+          <div class="review_text_box">
+          <div class="review_star">${"⭐".repeat(item.star)}</div>
+          <div class="review_title">${item.title}</div>
+          <div class="review_text">${item.text}</div>
+          <div class="review_actions">
+            <button class="edit_btn">수정</button>
+            <button class="delete_btn">삭제</button>
+          </div>
+          </div>
+        </div>
+      `;
+      reviewList.appendChild(div);
+    });
+```
 
   
-### 2.리뷰 수정(find) =>  const item = data.find((item) => item.id === id);
-      
-      
+### 2.리뷰 수정(find) =>  const item = data.find((item) => item.id === id);  
+      ```
+       let editId = null; 
+    const titleInput = document.querySelector(".title");
+    const textInput = document.querySelector(".text");
+    const selectStar = document.querySelector(".star_select");
+    const reviewBtn = document.querySelector(".review_btn");
+
+    const editBtn = document.querySelectorAll(".edit_btn");
+
+    editBtn.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const id = Number(e.target.closest(".reviewBox").dataset.id);
+        const data = JSON.parse(localStorage.getItem("reviewList")) || [];
+        const item = data.find((item) => item.id === id);
+        if (!item) return;
+
+        titleInput.value = item.title;
+        textInput.value = item.text;
+        selectStar.value = item.star;
+        reviewBtn.textContent = "수정 완료";
+
+        selectedImage = item.img || null;
+        editId = id;
+      });
+    });
+      ```
       
 ### 3. 리뷰 삭제(filter) => const deleteData = data.filter((item) => item.id !== id);
       
+```
+   const deleteBtn = document.querySelectorAll(".delete_btn");
 
+    deleteBtn.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const id = Number(e.target.closest(".reviewBox").dataset.id);
+        const data = JSON.parse(localStorage.getItem("reviewList")) || [];
+        const deleteData = data.filter((item) => item.id !== id);
+        localStorage.setItem("reviewList", JSON.stringify(deleteData));
+        originalRender();
+      });
+    });
+  };
 
-
-
-
-
-
-
-
- 
+```
 
 ###  로그인 / 회원가입
 
-- `data.json`을 활용한 유저 데이터 처리
+ #### `data.json`을 활용한 유저 데이터 처리
 
 ```
  let findUserList = [];
@@ -220,20 +281,20 @@ const pageNavList = [
   ```
 <br />
 
-  1.아이디 찾기(이름과 생년월일 정보가 일치할 시)
+  #### 1.아이디 찾기(이름과 생년월일 정보가 일치할 시)
 
   ```
   const userInfor = findUserList.find((user) => user.name === nameInput.value && user.birth === birthInput.value);
 ```
 
    
-   2.비밀번호 찾기(유저 아이디와 이메일 정보가 일치할 시)
+  #### 2.비밀번호 찾기(유저 아이디와 이메일 정보가 일치할 시)
 
 
     const userInfor = findUserList.find((user) =user.id === idInput.value.trim() &&`${user.emailId}@${user.domain}` === emailInput.value.trim());
     
 
- 프로필 이미지 업로드
+ #### 프로필 이미지 업로드
 
 ```
 const profileInput = document.getElementById("profileImage");
@@ -252,20 +313,29 @@ const profileInput = document.getElementById("profileImage");
 
 ```
  다음 주소 검색 API 연동
+```
+  const adressNumber = document.querySelector(".adress_number_box");
+  const adressNumberBtn = document.querySelector(".adress_number button");
+  const adress = document.querySelector(".adress");
+  const adressDetail = document.querySelector(".adress_detail");
 
+  const onClickSearch = () => {
+    new daum.Postcode({
+      oncomplete: function (data) {
+        adressNumber.value = data.zonecode;
+        adress.value = data.address;
+      },
+    }).open();
+  };
 
- <img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/51383868-68e7-413e-9f16-69ad9911d6b2" />
+  adressNumberBtn.addEventListener("click", onClickSearch);
 
+  adressDetail.addEventListener("change", (e) => {
+    adressDetail.value = e.target.value;
+  });
 
-- (회원가입form)입력 정보는 localStorage에 저장 및 유지
+```
 
-
-<img  width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/e523e51b-f8d7-4f2a-ac99-ba65e48000f5" />
-
-
-이때 newUser는 input에 입력한 값을 말합니다.
-
----
 
 ##  배포
 
@@ -298,7 +368,7 @@ const profileInput = document.getElementById("profileImage");
 
 ###  외부 API 연동
 
-- 다음 주소 검색 API를 활용해 실제 사용자 입력 경험 개선
+- 다음 주소 검색 API를 활용해 실제 사용자 입력 경험
 
 ---
 
@@ -313,3 +383,31 @@ const profileInput = document.getElementById("profileImage");
 ## 프로젝트 링크 (옵션)
 
 - [🔗 배포된 사이트 바로가기](http://jedongkim95.dothome.co.kr/)
+
+
+
+
+
+
+
+
+# 모아보기
+
+
+https://github.com/user-attachments/assets/cd56b2d6-9df9-4c43-b58d-df90c86f4ffb
+
+
+https://github.com/user-attachments/assets/8b7897dc-4091-4cdb-9187-dac6a7a581f9
+
+
+https://github.com/user-attachments/assets/dfc9680a-1e74-4714-a8ad-a5c68bd5cbf7
+
+
+https://github.com/user-attachments/assets/65ec48d3-8d08-4801-b5dc-58082b20f195
+
+
+https://github.com/user-attachments/assets/8ced5885-1b8a-4fbb-893c-82c29f853a70
+
+
+https://github.com/user-attachments/assets/97c35150-96bf-4068-91c6-25c8335ee5cc
+
